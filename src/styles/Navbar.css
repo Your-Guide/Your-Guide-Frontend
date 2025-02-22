@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap');
+
+/* Navbar container */
+.navbar {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Set the gradient background */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 15px 20px;
+}
+
+/* Content to avoid navbar overlap */
+.page-content {
+  margin-top: 90px; /* Adjust this value based on navbar height */
+}
+
+/* Navbar layout */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px; /* Add padding for better spacing */
+  height: 70px; /* Set navbar height */
+  overflow: hidden; /* Prevent expansion */
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%; /* Set to fill the navbar height */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.logo img {
+  height: 100%; /* Set logo height to match navbar height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures the image maintains aspect ratio without stretching */
+  margin-top: 0; /* Remove unwanted margins */
+  max-height: 70px; /* Ensure logo doesn't exceed navbar height */
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 30px; /* Reduced gap for a more compact layout */
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 10px 20px; /* Standard button padding */
+  border-radius: 8px; /* Slightly rounded corners */
+  font-size: 16px; /* Normal font size */
+  font-weight: 600; /* Bold text */
+  background: #2836b1; /* Background color set to #2836b1 */
+  color: white;
+  border: none;
+  transition: background 0.3s ease;
+  margin-right:20px;
+}
+
+.nav-links a:hover {
+  background: linear-gradient(360deg, #18216d, #1a2a64, #2a3d7f); /* Hover gradient effect */
+}
+
+/* Sign Up Button */
+.signup-btn {
+  font-weight: bold;
+}
+
+/* Mobile Menu Button */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 12px;
+  font-size: 18px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .logo img {
+    height: 70px; /* Adjust logo size for smaller screens */
+    width: auto; /* Ensure logo scales appropriately */
+  }
+}

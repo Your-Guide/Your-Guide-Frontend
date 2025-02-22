@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap');
+*{
+  /* margin-top: 5px; */
+  font-family: 'comfortaa',cursive;
+}
+
+/* Ensures the login form is centered */
+.login-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  background-color: #f0f2f5; /* Light background */
+  color:#2836b1;
+ 
+}
+
+h2{
+  font-weight: bolder;
+}
+/* Login Box */
+.login-right-container {
+  width: 400px; /* Fixed width for box */
+  padding: 40px; /* Padding inside the box */
+  background: white; /* White box background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); 
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Center logo */
+.login-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-logo img {
+  width: 60px;
+}
+
+/* Center all text */
+.login-center {
+  text-align: center;
+}
+
+.login-center h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.login-center p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+form input[type="email"],
+form input[type="password"],
+form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Password eye icon */
+.pass-input-div {
+  position:relative;
+  width: 350px;
+}
+
+.pass-input-div svg {
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+
+/* Remember me and forgot password */
+.login-center-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.remember-div {
+  display: flex;
+  align-items: center;
+}
+
+.remember-div label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Buttons */
+.login-center-buttons {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.login-center-buttons button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.login-center-buttons button:nth-child(1) {
+  background: #2836b1;
+  color: white;
+  border: 2px solid  #2836b1;;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.login-center-buttons button:nth-child(1):hover {
+  background: white;
+  color: black;
+}
+
+/* Signup Link */
+.login-bottom-p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.login-bottom-p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-bottom-p a:hover {
+  text-decoration: underline;
+}
+
+.forgot-pass-link
+{
+  margin-bottom: 3px;
+  color: black;
+}

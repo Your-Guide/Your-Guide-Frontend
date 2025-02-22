@@ -1,0 +1,138 @@
+
+/* Section Styling */
+.how-it-works {
+  background: white;
+  padding: 100px 20px; /* Increased padding for a bigger section */
+  text-align: center;
+  color: #2836b1; /* Changed text color to match the deep blue */
+  font-family: 'Open Sans', sans-serif; /* Applied Open Sans for body text */
+ 
+}
+
+/* Heading */
+.section-heading {
+  font-size: 40px; /* Increased font size for larger heading */
+  letter-spacing: 2px;
+  margin-bottom: 50px; /* Increased margin for better spacing */
+  color: #2836b1;
+  text-transform: uppercase;
+  position: relative;
+  animation: moveUpDown 2s ease-in-out infinite; /* Animation applied */
+  font-weight: 900px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes for up and down animation */
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Initial shadow */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up by 10px */
+    text-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Shadow grows as the element moves up */
+  }
+  100% {
+    transform: translateY(0); /* Return to original position */
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow returns to original size */
+  }
+}
+
+/* Steps Container */
+.steps-container {
+  display: flex;
+  justify-content:center; /* Ensures equal spacing */
+  align-items: center;
+ flex-wrap: wrap; /* Prevents wrapping of items */
+  gap: 40px;
+   /* Ensures content fits within a reasonable width */
+ 
+   /* Enables horizontal scrolling if needed */
+ 
+}
+
+/* Step Cards */
+.step {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Light blue gradient */
+  box-shadow: 10px 20px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px; /* Increased padding for bigger cards */
+  border-radius: 12px;
+  width: 200px; /* Increased size */
+  height: 150px; /* Increased size */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px; /* Increased font size */
+  color: #2836b1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effects */
+.step:hover {
+  transform: translateY(-5px); /* Moves the step upwards */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Decorative border effect on hover */
+.step::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.step:hover::before {
+  opacity: 1; /* Border effect visible on hover */
+}
+
+/* Icons */
+.step-icon {
+  font-size: 55px; /* Increased icon size for better proportion */
+  margin-bottom: 15px;
+  color: #2836b1; /* Matching icon color to the title */
+  filter: drop-shadow(10px 10px 5px rgb(0,0,0,0.3));
+}
+
+/* Arrows (Increased Size) */
+.arrow {
+  font-size: 50px; /* Increased arrow size */
+  color: #2836b1;
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
+@media (min-width: 768px) {
+  .steps-container{
+    flex-direction: row;
+  }
+    .step-icon {
+    font-size: 45px; /* Reduce icon size */
+    margin-bottom: 10px; /* Space between icon and text */
+  }
+
+  .arrow {
+    display: none; /* Hide arrows on small screens */
+  }
+}
+@media (max-width: 768px) {
+  .steps-container{
+    flex-direction: column;
+  }
+    .step-icon {
+    font-size: 45px; /* Reduce icon size */
+    margin-bottom: 10px; /* Space between icon and text */
+  }
+
+  .arrow {
+    display: none; /* Hide arrows on small screens */
+  }
+}

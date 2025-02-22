@@ -1,0 +1,46 @@
+/* Preloader Full Screen */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Preloader Logo Animation */
+  .preloader-logo {
+    width: 100px; /* Set a smaller width */
+    height: auto; /* Ensure aspect ratio is maintained */
+    animation: moveLogo 2s ease-in-out infinite, fadeOutLogo 2s ease-in-out forwards;
+  }
+  
+  /* Logo Moving Animation (Bouncing) */
+  @keyframes moveLogo {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Smaller bounce */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fading Animation */
+  @keyframes fadeOutLogo {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+  
