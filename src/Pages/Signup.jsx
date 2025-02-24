@@ -7,6 +7,8 @@ import "../styles/Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import styles
 
 const Registration = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,16 +20,17 @@ const Registration = () => {
   );
 
   const handleRegisterSubmit = async (e) => {
-    console.log("in registration");
     e.preventDefault();
+
     let name = e.target.name.value;
     let username = e.target.username.value;
     let password = e.target.password.value;
     let confirmPassword = e.target.confirmPassword.value;
 
     // Ensure no fields are empty
-    if (!name || !username || !password || !confirmPassword ) {
-      toast.error("All fields are required, and a resume must be uploaded!");
+    if (!name || !username || !password || !confirmPassword) {
+      console.log("in siede");
+      toast.error("All fields are required!!");
       return;
     }
 
@@ -60,12 +63,16 @@ const Registration = () => {
     formData.append("role", role);
 
     try {
-      const response = await axios.post("http://localhost:8080/api/auth/register", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const response = await axios.post(
+        "http://localhost:8080/api/auth/register",
+        formData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
       toast.success("Registration successful");
       console.log(formData);
-      console.log(response.data)
+      console.log(response.data);
       navigate("/Login");
     } catch (err) {
       toast.error(err.message);
@@ -93,7 +100,7 @@ const Registration = () => {
           <div className="register-center">
             <h2>Welcome to InterviewBuddy!</h2>
             <p>Please enter your details</p>
-            <form onSubmit={handleRegisterSubmit}>
+            <form onSubmit={handleRegisterSubmit} noValidate>
               <input
                 type="text"
                 placeholder="Enter name"
